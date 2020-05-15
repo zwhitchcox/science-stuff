@@ -11,9 +11,11 @@ import math
 # n!/ [k!(n - k)!]
 #
 # which is called "n choose k".
-# the word "combination" is sometimes used indicate an unordered collection of distinct objects
+# 
+# The word "combination" is sometimes used indicate an unordered collection of distinct objects.
+# You could also characterize this as the number of k-element subsets in an n-element set
 
-CARDS_IN_DECK = 52
-cardsInHand = int(input("Enter number of cards in a hand, and I will tell you how many possible hands there are: "))
-numHands = math.factorial(CARDS_IN_DECK) / math.factorial(CARDS_IN_DECK - cardsInHand) / math.factorial(cardsInHand)
+n = 52
+k = int(input("Enter number of cards in a hand, and I will tell you how many possible hands there are: "))
+combinations = math.factorial(n) / math.factorial(n - k) / math.factorial(k)
 print(f'There are {int(numHands):,} possible combinations for a {cardsInHand}-card hand.')

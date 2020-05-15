@@ -10,8 +10,9 @@ import math
 # where in is the size of the set (which would here be number of characters allowed in the password),
 # and k is the size of the permutation (here, the length of the password)
 
-numChars = int(input("Enter number of characters allowed in password (e.g. A-Z, a-z, 0-9 = 62): "))
-passLen = int(input("Enter length of password: "))
+n = int(input("Enter number of characters allowed in password (e.g. A-Z, a-z, 0-9 = 62): "))
+k = int(input("Enter length of password: "))
 
-# numChars choose passLen
-print(f'The number of possible characters with no repeating characters is {int(math.factorial(numChars)/math.factorial(numChars - passLen)):,}.')
+kPermutations = math.factorial(n)/math.factorial(n - k)
+
+print(f'The number of possible characters with no repeating characters is {kPermutations:,}.')
