@@ -14,6 +14,7 @@ import math
 # 
 # The word "combination" is sometimes used indicate an unordered collection of distinct objects.
 # You could also characterize this as the number of k-element subsets in an n-element set
+# A different order does not constitute a new permutation
 
 n = 52
 k = int(input("Enter number of cards in a hand, and I will tell you how many possible hands there are: "))

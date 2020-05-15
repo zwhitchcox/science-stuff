@@ -11,8 +11,11 @@ import math
 # back into the pool of available choices, because duplicates do not matter. But everything else is
 # the same from "combinations". Also, we subtract 1, because there is no danger of repetition on the 
 # first choice.
+#
+# for reference matrix: https://imgur.com/a/xBfITSQ
 
-n = int(input("Enter the total number of donut choices, and I'll tell you how many possible orders there are: "))
-k = int(input("How many donuts in an order? "))
-multisets = math.factorial(k + n - 1) / (math.factorial(k) * math.factorial(n - 1)
-print(f'There are {multisets} possible donut orders of size {k}.')
+print("This program will tell you how many possible donut orders there are.")
+n = int(input("Enter the total number of donut choices: "))
+k = int(input("How many donuts in an order? (e.g. 12) "))
+multisets = math.factorial(k + n - 1) / (math.factorial(k) * math.factorial(n - 1))
+print(f'There are {int(multisets):,} possible donut orders of size {k}.')
